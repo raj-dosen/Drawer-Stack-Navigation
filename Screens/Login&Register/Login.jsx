@@ -12,6 +12,10 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 function LoginPage({props}) {
   const navigation = useNavigation();
+
+  const homeBack = () => {
+    navigation.navigate('Drawer');
+  };
   return (
     <View style={{backgroundColor: 'white'}}>
       <View style={styles.logoContainer}>
@@ -43,7 +47,7 @@ function LoginPage({props}) {
         </View>
       </View>
       <View style={styles.button}>
-        <TouchableOpacity style={styles.inBut}>
+        <TouchableOpacity style={styles.inBut} onPress={homeBack}>
           <View>
             <Text style={styles.textSign}>Log in</Text>
           </View>
